@@ -6,7 +6,7 @@
 /*   By: aamorin- <aamorin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:31:31 by aamorin-          #+#    #+#             */
-/*   Updated: 2021/08/04 14:20:59 by aamorin-         ###   ########.fr       */
+/*   Updated: 2021/08/04 17:17:42 by aamorin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,32 @@ long	get_biarray_len(char **argv)
 	return (i);
 }
 
+int	repet_it(long *a, int items)
+{
+	int	i;
+	int	k;
+
+	i = 0;
+	k = 1;
+	while (items > i)
+	{
+		while (items > k)
+		{
+			if (a[i] == a[k])
+				return (0);
+			k++;
+		}
+		i++;
+		k = i + 1;
+	}
+	return (1);
+}
+
 long	*get_int_array(char **argv)
 {
 	int		i;
 	long	*a;
-	long	items;
+	int		items;
 
 	i = 0;
 	items = get_biarray_len(argv);
@@ -43,6 +64,11 @@ long	*get_int_array(char **argv)
 			exit(1);
 		}
 		i++;
+	}
+	if (!repet_it(a, items))
+	{
+		ft_printf("\033[0;31mError\n");
+		exit (1);
 	}
 	return (a);
 }

@@ -6,7 +6,7 @@
 /*   By: aamorin- <aamorin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:28:49 by aamorin-          #+#    #+#             */
-/*   Updated: 2021/08/04 14:19:25 by aamorin-         ###   ########.fr       */
+/*   Updated: 2021/08/04 17:18:48 by aamorin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ t_values		rra(long *a, long *b, t_values stack_values);
 t_values		rrb(long *a, long *b, t_values stack_values);
 t_values		pb(long **a, long **b, t_values stack_values);
 t_values		pa(long **a, long **b, t_values stack_values);
-
 
 #endif

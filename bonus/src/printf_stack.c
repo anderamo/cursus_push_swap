@@ -6,7 +6,7 @@
 /*   By: aamorin- <aamorin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 13:51:25 by aamorin-          #+#    #+#             */
-/*   Updated: 2021/08/04 14:32:43 by aamorin-         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:36:45 by aamorin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ void	print_stack_b(long *b, int i)
 void	print_stack_a_b(long *a, long *b, int i)
 {
 	if (a[i] == 2148473648)
-		ft_printf("				2148473648				-		\n");
+		ft_printf("				2148473648");
 	else if (a[i] == -2148473648)
-		ft_printf("				-2148473648				-		\n");
+		ft_printf("				-2148473648");
 	else
-		ft_printf("				%d					-		\n", a[i]);
+		ft_printf("				%d", a[i]);
 	if (b[i] == 2148473648)
-		ft_printf("				-				2148473648		\n");
+		ft_printf("				2148473648		\n");
 	else if (b[i] == -2148473648)
-		ft_printf("				-				-2148473648		\n");
+		ft_printf("				-2148473648		\n");
 	else
-		ft_printf("				-					%d		\n", b[i]);
+		ft_printf("					%d		\n", b[i]);
 }
 
 void	print_stack_struck(long *a, long *b, t_values stack_values)
@@ -57,7 +57,7 @@ void	print_stack_struck(long *a, long *b, t_values stack_values)
 	ft_printf("----------------------------------------------------------\n");
 	ft_printf("				a stack					b stack				\n");
 	ft_printf("				-------					-------			\n");
-	while (stack_values.a_size > i || stack_values.a_size > i)
+	while (stack_values.a_size > i || stack_values.b_size > i)
 	{
 		if (stack_values.a_size > i && stack_values.b_size > i)
 			print_stack_a_b(a, b, i);

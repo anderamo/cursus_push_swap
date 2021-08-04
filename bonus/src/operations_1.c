@@ -6,7 +6,7 @@
 /*   By: aamorin- <aamorin-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 14:21:46 by aamorin-          #+#    #+#             */
-/*   Updated: 2021/08/04 14:30:49 by aamorin-         ###   ########.fr       */
+/*   Updated: 2021/08/04 16:28:25 by aamorin-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,12 +104,12 @@ long	*new_pb_delete(long *array, long i)
 {
 	int	count;
 
-	count = 0;
-	count++;
+	count = 1;
 	while (i > count)
 	{
 		array[count - 1] = array[count];
 		count++;
 	}
+	array[count - 1] = array[count];
 	return (array);
 }
